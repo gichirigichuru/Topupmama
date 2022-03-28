@@ -1,1 +1,51 @@
-<p>signup works!</p>
+<div class="auth-wrapper container mt-5">
+    <form
+      class="form-signin col-8"
+      [formGroup]="signupForm"
+      (ngSubmit)="registerUser()"
+    >
+      <h3 class="mt-5 h3 mb-3 font-weight-normal text-center">Please sign up</h3>
+      <div class="form-group mt-3">
+        <label>First Name</label>
+        <input
+          type="text"
+          class="form-control"
+          formControlName="first_name"
+          placeholder="Enter name"
+          required
+        />
+      </div>
+      <div class="form-group mt-3">
+        <label>Last Name</label>
+        <input
+          type="text"
+          class="form-control"
+          formControlName="last_name"
+          placeholder="Enter name"
+          required
+        />
+      </div>
+      <div class="form-group mt-3">
+        <label>Email address</label>
+        <input
+          type="email"
+          class="form-control"
+          formControlName="email"
+          placeholder="Enter email"
+          required
+        />
+      </div>
+      <div class="form-group mt-3">
+        <label>Password</label>
+        <input
+          type="password"
+          class="form-control"
+          formControlName="password"
+          placeholder="Password"
+          required
+        />
+      </div>
+      <button type="submit" class="btn btn-block btn-primary mt-3">Sign up</button>
+    </form>
+  </div>
+  
