@@ -61,6 +61,16 @@ export class AuthService {
     );
   }
 
+  deleteUser(id: any): Observable<any> {
+    let api = `${this.endpoint}/users/${id}`;
+    return this.http.delete(api, {headers: this.headers}).pipe(
+      map((res: any) => {
+        return res || {};
+      }),
+      catchError(this.handleError)
+    );
+  }
+
   getUsers(): Observable<any> {
     let api = `${this.endpoint}/users`;
     return this.http.get(api, {headers:this.headers}).pipe(
