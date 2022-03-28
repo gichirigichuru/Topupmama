@@ -8,6 +8,13 @@ import { SigninComponent } from './components/signin/signin.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { UserProfileComponent } from './components/user-profile/user-profile.component';
 
+// Import Http  client
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { AuthInterceptor } from './shared/authconfig.interceptor';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { HomeComponent } from './components/home/home.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
